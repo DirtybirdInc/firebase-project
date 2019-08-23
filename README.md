@@ -15,17 +15,15 @@ A small demo website using firebase hosting and cloud functions.
   ```
   $ git clone <www.this-repo.com> <path/to/local/repo>
   $ cd <path/to/local/repo>
-  $ firebase init functions **install dependencies**
+  $ firebase init functions
   $ firebase init hosting **use "public" as *public directory***
   ```
-- Install ```mocha``` Unit Testing and ```nyc``` https://mochajs.org/<br>
+- Install t
   ```
   $ cd functions
-  $ npm install --save-dev mocha
-  $ npm install --save-dev nyc
+  $ npm install
   $ cd ../public
-  $ npm install --save-dev mocha
-  $ npm install --save-dev nyc
+  $ npm install
   ```
 - Alter ```functions/package.json``` and ```public/package.json```<br> 
   ```
@@ -36,6 +34,11 @@ A small demo website using firebase hosting and cloud functions.
   ```
   $ git pull
   $ cd functions
+  $ npm install
   $ npm test > release_<rid>_unit_tests.txt
+  $ cd ../public
+  $ npm install
+  $ npm test > release_<rid>_unit_tests.txt
+  $ cd ..
   $ firebase deploy > release_<rid>_deploy.txt
   ```
