@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" type="image/png" href="/cloud-solid.png" />
+  <title>Afluent Agency</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/landing-page.css" rel="stylesheet">
+  <script src="MyNavBar.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#my_nav_bar");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height() && !$nav.hasClass(".is-collapsed"));
+            });
+        });
+
+    </script>
+    <style>
+        #my_nav_bar.scrolled {
+          background-color: #000000 !important;
+          transition: background-color 200ms linear;
+        }
+        .navbar-login {
+            border-radius: 0;
+           /*width: 305px;*/
+            max-width: 305px !important;
+            padding-top: 10px;
+            padding-bottom: 0px;*/
+        }
+        .navbar-login-session {
+            padding: 10px;
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+        .icon-size {
+            font-size: 87px;
+        }
+        #profile_pic_small:hover {
+            border-width:4px;
+            border-color:blue;
+        }
+        @media only screen and (min-width: 576px) {
+          #dropdown_items_collapsable {
+              display: none;
+          }
+        } 
+        @media only screen and (min-width: 992px) {
+          .navbar-login {
+              width: 305px;
+          }
+        } 
+        
+    </style>
+</head>
+
+<body>
+
+    <div id="my_nav_bar" class="fixed-top bg-transparent navbar-dark" style="width:100%">
+        <div class="container">
+            <div class="d-flex">
+                <div class="mr-auto p-2">
+                    <a class="navbar-brand" href="#"><i class="fa fa-cloud" aria-hidden="true" style="padding-right:5px;"></i> Afluent Agency</a>
+                </div>
+                <div class="p-2">
+                    <nav class="navbar-expand-sm">
+                        <div class="nav-item dropdown dropdown-menu-right">
+                            <a class="navbar-toggler" href="#" data-toggle="dropdown" style="border:0;">
+                                <i class="fas fa-ellipsis-v" style="margin-top:10px;"></i>
+                            </a>
+                            <ul id="dropdown_items_collapsable" class="dropdown-menu dropdown-menu-right rounded-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                                <li class="nav-item" style="padding-right:5px;">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="collapse navbar-collapse" id="navbarResponsive">
+                            <ul id="nav_items" class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/">
+                                        Home
+                                        <span class="sr-only">(current)</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="p-2">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="sign_in_button">
+                            <a class="nav-link text-nowrap" href="#">Sign In</a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-menu-right">
+                            <a href="#" data-toggle="dropdown">
+                                <img id="profile_pic_small" width="42" class="rounded-circle border-4" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom" style="display: none">
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right rounded-0">
+                                <li>
+                                    <div class="navbar-login">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-4">
+                                                    <p class="text-center">
+                                                        <img id="profile_pic_big" height="80" class="rounded-circle" />
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <p id="profile_display_name" class="text-left"><strong></strong></p>
+                                                    <p id="profile_email" class="text-left small"></p>
+                                                    <p class="text-left">
+                                                        <a id="sign_out_button" href="#" class="btn btn-primary btn-block btn-sm">Sign out</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+                   
+             
+
+            <!-- Navigation -->
+           
+            <!-- Masthead -->
+            <header>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <!--<ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>-->
+                    <div class="carousel-inner" role="listbox">
+                        <!-- Slide One - Set the background image for this slide in the line below -->
+                        <div class="carousel-item active" style="background-image: url('img/bg-showcase-3.jpg')">
+                            <!--<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                                <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+                            </video>-->
+                            <div class="d-flex align-items-center justify-content-center overlay">
+                                <div class="d-flex flex-column">
+                                    <h2 class="display-4 text-center text-white">We help you to get Big</h2>
+                                    <!--<p class="lead text-center text-white">This is a description for the first slide.</p>-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide Two - Set the background image for this slide in the line below -->
+                        <div class="carousel-item" style="background-image: url('img/bg-showcase-2.jpg')">
+                            <div class="d-flex align-items-center justify-content-center overlay">
+                                <div class="d-flex flex-column">
+                                    <h2 class="display-4 text-center text-white">A wholistic view on Social Media</h2>
+                                    <!--<p class="lead text-center text-white">Analytics and Research adding to the Soup</p>-->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide Three - Set the background image for this slide in the line below -->
+                        <div class="carousel-item" style="background-image: url('img/bg-showcase-1.jpg')">
+                            <div class="d-flex align-items-center justify-content-center overlay">
+                                <div class="d-flex flex-column">
+                                    <h2 class="display-4 text-center text-white">Reach your target Customer</h2>
+                                    <!-- <p class="lead text-center text-white">This is a description for the first slide.</p>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Icons Grid -->
+            <section class="features-icons bg-light text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                                <div class="features-icons-icon d-flex">
+                                    <i class="icon-screen-desktop m-auto text-primary"></i>
+                                </div>
+                                <h3>Campaigns &amp; Ads</h3>
+                                <p class="lead mb-0">We design the campaign according to your target customers needs!</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                                <div class="features-icons-icon d-flex">
+                                    <i class="icon-layers m-auto text-primary"></i>
+                                </div>
+                                <h3>Account Management</h3>
+                                <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                                <div class="features-icons-icon d-flex">
+                                    <i class="fa fa-users m-auto text-primary"></i>
+                                </div>
+                                <h3>Social Events</h3>
+                                <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Image Showcases -->
+            <section class="showcase">
+                <div class="container-fluid p-0">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+                        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                            <h2>Fully Responsive Design</h2>
+                            <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+                        <div class="col-lg-6 my-auto showcase-text">
+                            <h2>Updated For Bootstrap 4</h2>
+                            <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+                        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                            <h2>Easy to Use &amp; Customize</h2>
+                            <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Team -->
+            <section class="showcase bg-light">
+                <div class="container-fluid p-0">
+                    <div class="row no-gutters">
+                        <div class="col-12 showcase-text">
+                            <h2>Combining Skill Experience and Values</h2>
+                            <p class="lead mb-0">
+                                Our team combines a unique set of skills and valuable experience in the swiss market.
+                                Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="testimonials row no-gutters text-center">
+                        <div class="col-lg-4 col-xl-4">
+                            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="img/testimonials-1.jpg" alt="">
+                                <h5>Margaret E.</h5>
+                                <p class="font-weight-light mb-0">"Creative Mind of the Agency"</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xl-4">
+                            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="img/testimonials-2.jpg" alt="">
+                                <h5>Fred S.</h5>
+                                <p class="font-weight-light mb-0">"Organizantional Talent"</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-xl-4">
+                            <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                                <img class="img-fluid rounded-circle mb-3" src="img/testimonials-3.jpg" alt="">
+                                <h5>Sarah W.</h5>
+                                <p class="font-weight-light mb-0">"Thanks so much for making these free resources available to us!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="contact-us text-black text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 mx-auto">
+                            <h2>Contact us</h2>
+                            <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 my-5">
+                            <a style="color:black" href="#">
+                                <i class="fa fa-phone fa-3x mb-3" aria-hidden="true"></i>
+                                <h4 class="mb-5">Call us<br /><small>+88 (0) 168 36 1558</small></h4>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 my-5">
+                            <a style="color:black" href="https://www.google.com/maps/@47.3858176,8.4746378,3a,75y,220.93h,86.06t/data=!3m5!1e1!3m3!1sormqLOUIPts-1NZb6XBzbg!2e0!6s%2F%2Fgeo1.ggpht.com%2Fcbk%3Fpanoid%3DormqLOUIPts-1NZb6XBzbg%26output%3Dthumbnail%26cb_client%3Dmaps_sv.tactile.gps%26thumb%3D2%26w%3D203%26h%3D100%26yaw%3D27.016676%26pitch%3D0%26thumbfov%3D100">
+                                <i class="fa fa-map-marker fa-3x mb-3" aria-hidden="true"></i>
+                                <h4 class="mb-5">Office Location<br /><small>Suite 02, Level 12, Sahera Tropical Center</small></h4>
+                            </a>
+                        </div>
+                        <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 my-5">
+                            <a style="color:black" href="mailto:contact@afluent.ch">
+                                <i class="fa fa-globe fa-3x mb-3" aria-hidden="true"></i>
+                                <h4 class="mb-5">
+                                    Email<br /><small>contact@afluent.ch</small>
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+                            <ul class="list-inline mb-2">
+                                <li class="list-inline-item">
+                                    <a href="#">About</a>
+                                </li>
+                                <li class="list-inline-item">&sdot;</li>
+                                <li class="list-inline-item">
+                                    <a href="#">Contact</a>
+                                </li>
+                                <li class="list-inline-item">&sdot;</li>
+                                <li class="list-inline-item">
+                                    <a href="#">Terms of Use</a>
+                                </li>
+                                <li class="list-inline-item">&sdot;</li>
+                                <li class="list-inline-item">
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                            </ul>
+                            <p class="text-muted small mb-4 mb-lg-0">&copy; Afluent Agency 2019. All Rights Reserved.</p>
+                        </div>
+                        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item mr-3">
+                                    <a href="#">
+                                        <i class="fab fa-facebook fa-2x fa-fw"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item mr-3">
+                                    <a href="#">
+                                        <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">
+                                        <i class="fab fa-instagram fa-2x fa-fw"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+
+            <!-- Bootstrap core JavaScript -->
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Import and configure the Firebase SDK -->
+            <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
+            <!-- If you do not serve/host your project using Firebase Hosting see https://firebase.google.com/docs/web/setup -->
+            <script src="/__/firebase/6.4.0/firebase-app.js"></script>
+            <script src="/__/firebase/6.4.0/firebase-auth.js"></script>
+            <script src="/__/firebase/6.4.0/firebase-database.js"></script>
+            <script src="/__/firebase/6.4.0/firebase-functions.js"></script>
+            <script src="/__/firebase/init.js"></script>
+
+            <script src="/index_main.js"></script>
+</body>
+
+</html>
