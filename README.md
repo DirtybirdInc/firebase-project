@@ -18,17 +18,6 @@ A small demo website using firebase hosting and cloud functions.
   $ firebase init functions
   $ firebase init hosting **use "public" as *public directory***
   ```
-- Install t
-  ```
-  $ cd functions
-  $ npm install
-  $ cd ../public
-  $ npm install
-  ```
-- Alter ```functions/package.json``` and ```public/package.json```<br> 
-  ```
-  { scripts: { "test": "nyc mocha"} }
-  ```
   
 ### Deployment script
   ```
