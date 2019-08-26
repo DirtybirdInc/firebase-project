@@ -11,7 +11,8 @@ exports.eventHandler = function (data, context) {
 }
 
 exports.githubWebHookHandler = functions.https.onRequest((req, res) => {
-    console.debug(JSON.stringify(req));
+    console.debug("bla bla bla");
+    console.debug(req);
     res.send("Hello");
 });
 
