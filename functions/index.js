@@ -12,7 +12,7 @@ exports.eventHandler = function (data, context) {
 
 exports.githubWebHookHandler = functions.https.onRequest((req, res) => {
     console.log("bla bla bla");
-    console.log(req.body.payload.head_commit);
+    console.log(JSON.parse(req.body.payload.head_commit));
     res.send("OK");
 });
 
