@@ -11,9 +11,8 @@ exports.eventHandler = function (data, context) {
 }
 
 exports.githubWebHookHandler = functions.https.onRequest((req, res) => {
-    console.debug("bla bla bla");
-    console.debug(req);
-    res.send("Hello");
+    console.log("bla bla bla");
+    console.log(req);
 });
 
 // this is a "Callable"
