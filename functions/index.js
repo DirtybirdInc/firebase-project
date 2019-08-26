@@ -12,7 +12,7 @@ exports.eventHandler = function (data, context) {
 
 exports.githubWebHookHandler = functions.https.onRequest((req, res) => {
     console.log("bla bla bla");
-    console.log(req.body);
+    console.log(req.body.head_commit.id);
 });
 
 // this is a "Callable"
