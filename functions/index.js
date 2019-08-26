@@ -10,6 +10,11 @@ exports.eventHandler = function (data, context) {
     return "Hello World!";
 }
 
+exports.githubWebHookHandler = functions.https.onRequest((req, res) => {
+    console.debug(JSON.stringify(req));
+    res.send("Hello");
+});
+
 // this is a "Callable"
 exports.fbEventHandler = functions.https.onCall(exports.eventHandler);
 
